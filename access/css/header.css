@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+.favicon{
+    padding:0 160px;
+    justify-content: center;
+}
+.font_icon{
+    margin:3px;
+}
+.font_iconCar{
+    color: rgb(78, 89, 236);
+    font-size: 50px;
+}
+.img_car{
+    max-height: 64px;
+}
+.header_form{
+    display: flex;
+    outline: none;
+    list-style-type: none;
+    justify-content: center;
+    height: 64px;
+    margin-left: 120px;
+}
+.header_item{
+    align-self: center;
+    padding: 0 16px;
+}
+.header_item:last-child{
+    padding: 8px;
+}
+.fontsize_item:hover{
+    text-decoration: none;
+}
+.fontsize_item{
+    outline: none;
+    text-decoration: none;
+    font-size: 14px !important;
+    color: black;
+    font-weight: 600 !important;
+}
+.hotline{
+    position: absolute;
+    display: none;
+    width: 240px;
+    height: 80px;
+    border-radius: 6px;
+    background-color: rgb(118, 247, 252);
+    margin-top: 10px;
+}
+.hotline li{
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+.show{
+    display: block;
+}
+/* section image */
+.section_backgroundImage{
+    width: 100%;
+    height: 645px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: #3cc6dc; */
+    background-image: url('/access/img/car.img.png');
+}
+.section-slogan{
+    text-align: center;
+    font-family: 'Dosis', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding-top: 30px;
+}
+.section-slogan-desc{
+    color: #8ce748;
+    line-height: 47px;
+    font-size: 42px;
+    
+}
+.section-slogan-desc span{
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+span.fadeSlogan{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.search-bar{
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 900px;
+    border-start-start-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.search-bar-item-icon {
+    font-size: 28px;
+    margin-left: 30px;
+    color: #2569e3;
+}
+.search-bar-item-input{
+    outline: none;
+    height: 35px;
+    margin-left: 8px;
+    width:  210px;
+    border: none;  
+    font-size: 18px;
+    color: rgb(82, 81, 81);
+}
+.search-bar-item-input::placeholder{
+    opacity: 0.6;
+    font-size: 1.7rem;
+}
+.border-right{
+    border-right: solid 0.5px;
+}
+.search-bar-btn{
+    padding: 0 20px;
+    padding-right: 9px;
+    height: 60px;
+    border: 0.2px;
+    border-end-end-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 120px;
+    background-color: rgb(255, 197, 0);
+    font-size: 1.6rem;
+    font-weight: 700px;
+}
+.search-bar-btn:hover{
+    background-color: rgb(194 151 4);
+    outline: none;
+}
+
+
+
+

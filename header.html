@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt xe an toàn</title>
+    <link rel="shotcut icon" href="/access/icon/favicon.ico">
+    <link rel="stylesheet" href="/access/css/header.css">
+    <link rel="stylesheet" href="/access/css/login.css">
+    <link rel="stylesheet" href="/access/icon/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="/access/boostrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/access/css/bootstrap.min.css">
+    <script src="/access/js/jquery.min.js"></script>
+    <script src="/access/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="favicon">
+                <span class="font_iconCar">
+                    <i class="fas fa-bus-alt"></i>
+                </span>
+                <img src="/access/img/car.png" alt="" class="img_car">
+            </div>
+            <ul class="header_form">
+                <li class="header_item">
+                    <a class="fontsize_item" href="">Thuê xe</a>
+                </li>
+                <li class="header_item">
+                    <a class="fontsize_item" href="">Limousine</a>
+                </li>
+                <li class="header_item">
+                    <a class="fontsize_item" href="">Quản lý đơn hàng</a>
+                </li>
+                <li class="header_item">
+                    <a class="fontsize_item" href="">Trở thành đối tác<span class="font_icon"><i
+                                class="fas fa-caret-down"></i></span></a>
+                </li>
+                <li class="header_item">
+                    <button class="btn btn-info fontsize_item" onclick="clickHidden('phone')"><span
+                            class="font_icon font_iconPhone">
+                            <i class="fas fa-phone"></i>
+                        </span>Hotline</button>
+                    <div class="hotline" id="phone">
+                        <ul>
+                            <li>Vinaphone -0917334338</li>
+                            <li>Viettel -0865888919</li>
+                            <li>MobilePhone-0123478999</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header_item">
+                    <button class="btn btn-success" data-toggle="modal" data-target="#myModal-login"><span
+                            class="font_icon fontsize_item">
+                            <i class="fas fa-user"></i>
+                        </span>Đăng Nhập</button>
+                </li>
+                <li class="header_item">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal-register"><span
+                            class="font_icon fontsize_item">
+                            <i class="fas fa-user"></i>
+                        </span>Đăng Ký</button>
+                </li>
+            </ul>
+        </div>
+        <!-- Modal form login -->
+        <div id="myModal-login" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="login_submit.php" method="post" class="form">
+                            <h3 class="heading">Đăng Nhập</h3>
+                            <p class="desc">Nhập thông tin đăng nhập vào form sau</p>
+                            <div class="form_login">
+                                <label for="username" class="form-lable">Tên đăng nhập:</label>
+                                <input type="text" name="username" id="username" class="form-control"
+                                    placeholder="VD: Nguyễn Văn A">
+                                <span class="form-massage"></span>
+                            </div>
+                            <div class="form_login">
+                                <label for="password_login" class="form-lable">Mật khẩu:</label>
+                                <input type="password" name="password_login" id="password_login" class="form-control"
+                                    placeholder="Nhập mật khẩu tại đây">
+                                <span class="form-massage"></span>
+                            </div>
+                            <div class="form_login">
+                                <label for="email_login" class="form-lable">Email:</label>
+                                <input type="email" name="email_login" id="email_login" class="form-control"
+                                    placeholder="email@gmail.com">
+                                <span class="form-massage"></span>
+                            </div>
+                            <button class="form-submit" name="login-submit">Đăng Nhập</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal form register -->
+        <div id="myModal-register" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="register_submit.php" method="post" class="form" id="form-1">
+                            <h3 class="heading">Đăng ký</h3>
+                            <p class="desc">Mời bạn nhập thông tin đăng ký tại form</p>
+                            <div class="space"></div>
+                            <div class="form-login">
+                                <label for="fullname" class="form-lable">Tên đăng ký</label>
+                                <input type="text" id="fullname" name="fullname" placeholder="VD: Nguyen Van A"
+                                    class="form-control">
+                                <span class="form-massage"></span>
+                            </div>
+                            <div class="form-login">
+                                <label for="email" class="form-lable">Email</label>
+                                <input type="text" id="email" name="email" placeholder="VD: email@domain.com"
+                                    class="form-control">
+                                <span class="form-massage"></span>
+                            </div>
+                            <div class="form-login">
+                                <label for="password" class="form-lable">Mật khẩu</label>
+                                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu"
+                                    class="form-control">
+                                <span class="form-massage"></span>
+                            </div>
+                            <div class="form-login">
+                                <label for="password_confirm" class="form-lable">Nhập lại mật khẩu</label>
+                                <input type="password" id="password_confirm" name="password_confirm"
+                                    placeholder="Nhập lại mật khẩu" class="form-control">
+                                <span class="form-massage"></span>
+                            </div>
+                            <button class="form-submit submit_disabled" name="form-submit" id="submit_register">Đăng
+                                ký</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search navigator -->
+        <div class="section_backgroundImage">
+            <div class="section-slogan">
+                <span class="section-slogan-desc">An Toàn, Nhanh Chóng, Tiện Lợi</span><br>
+                <span class="section-slogan-desc">Hoàn tiền lên đến 150% khi bị hủy chuyến.</span>
+            </div>
+            <div class="search">
+                <div class="search-bar">
+                    <div class="search-bar-item">
+                        <span><i class="fas fa-map-marker-alt search-bar-item-icon"></i></span>
+                        <input type="text" class="search-bar-item-input border-right" placeholder="Nhập tỉnh, thành phố đi.">
+                    </div>
+                    <div class="search-bar-item">
+                        <span><i class="fas fa-map-marker-alt search-bar-item-icon"></i></span>
+                        <input type="text" class="search-bar-item-input border-right" placeholder="Nhập tỉnh thành phố đến.">
+                    </div>
+                    <div class="search-bar-item">
+                        <span><i class="fas fa-calendar-alt search-bar-item-icon "></i></span>
+                        <input type="date" name="" id="" class="search-bar-item-input">
+                    </div>
+                </div>
+                <button class="search-bar-btn">Tìm kiếm</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="/access/js/header.js"></script>
+</body>
+
+</html>
